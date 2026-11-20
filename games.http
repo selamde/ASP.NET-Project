@@ -1,7 +1,7 @@
 GET http://localhost:5155/games
 
 ###
-GET http://localhost:5155/games/9
+GET http://localhost:5155/games/1
 
 
 ###
@@ -9,24 +9,23 @@ POST http://localhost:5155/games
 Content-Type: application/json
 
 {
-    "name": "FC-27",
-    "Genre": "Football",
-    "Price": 1000.99,
-    "RelaseDate":"2025-10-01"
+    "name": "Total Football",
+    "genreId": 1,
+    "Price": 15.99,
+    "RelaseDate":"2026-10-01"
 
 }
 
 ###
-PUT http://localhost:5155/games/1
+PUT http://localhost:5155/games/2
 
 
 {
     "name": "Total football",
-    "genre": "Football",
+    "genreId": "Football",
     "price": 29.99,
-    "relaseDate": "2000-07-15"
 }
 
 
 ###
-DELETE http://localhost:5155/games/1
+DELETE http://localhost:5155/games/2

@@ -38,8 +38,6 @@ namespace Gamestore.Api.Data.migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("GenreId");
-
                     b.ToTable("Games");
                 });
 
@@ -56,17 +54,6 @@ namespace Gamestore.Api.Data.migrations
                     b.HasKey("Id");
 
                     b.ToTable("Genre");
-                });
-
-            modelBuilder.Entity("Gamestore.Api.Models.Game", b =>
-                {
-                    b.HasOne("Gamestore.Api.Models.Genre", "Genre")
-                        .WithMany()
-                        .HasForeignKey("GenreId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Genre");
                 });
 #pragma warning restore 612, 618
         }

@@ -18,7 +18,7 @@ public static void MigrateDb(this WebApplication app)
 public static void AddGameStoreDb(this WebApplicationBuilder builder)
     {
         var connString = builder.Configuration.GetConnectionString("GameStore");
-
+builder.Services.AddScoped<GameStoreContext>();
 builder.Services.AddSqlite<GameStoreContext>(
     connString,
      optionsAction: Options => Options.UseSeeding((context, _) =>

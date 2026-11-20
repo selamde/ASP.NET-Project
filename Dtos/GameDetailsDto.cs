@@ -1,0 +1,10 @@
+namespace Gamestore.Api.Dtos;
+
+public record GameDetailsDto(
+    int Id,
+    string Name,
+    int Genre,
+    decimal Price,
+    DateOnly RelaseDate
+);
+
